@@ -1,4 +1,4 @@
-AVF-TERM1311
+Full Sail University
 ============
 
-Full Sail University Course: Advanced Visual Frameworks
+Advanced Visual Frameworks Term 1311
