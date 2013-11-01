@@ -7,12 +7,12 @@
  */
 
 .ui-header h1.ui-title {
-            font-size: 12px;
+    font-size: 12px;
     width: 90%;
     margin: 0 auto;
     margin-top: 25px;
     max-width: 300px;
-    
+
 }
 #pageOne img {
     width: 40%;
@@ -23,7 +23,7 @@
 
 }
 div.ui-content  {
-                font-size: 12px;
+    font-size: 12px;
     text-align: center;
 }
 /*#pageOne {
@@ -56,7 +56,7 @@ div.ui-content  {
 
 }
 #text-basic {
-color: #000000 ;
+    color: #000000 ;
 }
 label.error {
     color: red;
@@ -81,12 +81,12 @@ ul li {
 
 }
 #addProject img {
-                width: 70%;
-                max-width: 250px;
-                display: block;
-                margin-top: 10%;
-                margin-left: auto;
-                margin-right: auto;
+    width: 70%;
+    max-width: 250px;
+    display: block;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
 }
 header h2 {
     font-family: "chalkduster", cursive;
@@ -100,11 +100,11 @@ section.ui-content{
 }
 section.ui-content section    {
     display: inline-block;
-    margin-right: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
     position: relative;
     font-family: "chalkduster", cursive;
     vertical-align: top;
-
 }
 section.ui-content section h1{
     margin-top: 15px;
