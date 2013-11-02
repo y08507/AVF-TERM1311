@@ -1,0 +1,3 @@
+# view AndroidManifest.xml #generated:6
+-keep class com.fullsail.demoApp.AVFTERM1311 { <init>(...); }
+
