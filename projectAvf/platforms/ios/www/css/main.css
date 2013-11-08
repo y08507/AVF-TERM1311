@@ -148,5 +148,12 @@ section#dynamicWeek1 {
     margin: 15px 0 5px 0;
     width: 90%;
 }
+/*https://developer.apple.com/library/safari/documentation/appleapplications/reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html*/
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
 
 
