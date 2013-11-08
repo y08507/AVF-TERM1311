@@ -22,7 +22,7 @@ Author: Luis Camacho Jr.
 Full Sail University
 Course: AVF
 Term: 1311
-Activity Demo App Week 1-->
+Activity Demo App Week 2-->
 <!DOCTYPE html>
 <html>
     <head>
@@ -34,13 +34,6 @@ Activity Demo App Week 1-->
         <title>AVF Demo App PhoneGap</title>
     </head>
     <body>
-        <!--div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div-->
 
         <!-- Home Page -->
         <section id="pageOne" data-role="page" data-title="ThinkTank">
@@ -49,9 +42,8 @@ Activity Demo App Week 1-->
                 <h1>Demo App Launch Page Shell</h1>
                 <img src="img/ThinkTankResize.png" alt="View Source Logo"/>
             </header>
-            <section data-role="content">
+            <section data-role="content" class="pageOne">
             <section>
-
                 <h1>Native Components Chosen:</h1>
                 <h2>Android & iOS compatible</h2>
                 <ul>
@@ -65,31 +57,72 @@ Activity Demo App Week 1-->
             <section>
                 <h1>Data API Resources Chosen:</h1>
                 <ul>
-                    <li><img src="img/Instagram_Icon_Large.png" alt="View Source Logo"/>Instagram API</li>
-                    <li><img src="img/twitter-bird-light-bgs.png" alt="View Source Logo"/>Twitter API</li>
+                    <li><a href="#viewApiGrid" data-transition="fade"><img src="img/Instagram_Icon_Large.png" alt="View Source Logo"/>Instagram API</a></li>
+                    <li><a href="#viewApiGridB" data-transition="fade"><img src="" alt="View Source Logo"/>Rotten Tomatoes API</a></li>
                 </ul>
             </section>
             <section>
                 <h1>Research Topics</h1>
                 <ul>
-                    <li><a href="#" data-transition="fade">Week 1 Data Research, Project Intent</a>
+                    <li><a href="#" data-transition="fade" id="week1">Week 1 Data Research, Project Intent</a>
                     </li>
-                    <li><a href="#" data-transition="fade">Week 2 Discuss Accessibility</a>
+                    <li><a href="#" data-transition="fade" id="week2">Week 2 Discuss Accessibility</a>
                     </li>
-                    <li><a href="#" data-transition="fade">Week 3 Industry Research</a>
+                    <li><a href="#" data-transition="fade" id="week3">Week 3 Industry Research</a>
                     </li>
                 </ul>
             </section>
             </section>
         </section>
+
+        <!-- API Page listview -->
+        <!--section id="viewApi" data-role="page" data-theme="a" data-title="ThinkTank Ideas">
+            <header data-role="header" data-position=""  data-theme="a" data-id="tt_header">
+                <h1>ThinkTank</h1>
+                <h2>Social Collaboration on a Global Scale</h2>
+                <a href="#pageOne" data-direction="reverse" data-icon="home">Back</a>
+            </header>
+            <section data-role="content">
+                <ul data-role="listview" data-filter="false" data-inset="true" id="ideaApi">
+
+                </ul>
+            </section>
+        </section-->
+
+        <!-- API Page Grid Instagram -->
+        <section id="viewApiGrid" data-role="page" data-title="ThinkTank Ideas">
+            <header data-role="header">
+                <h1>ThinkTank</h1>
+                <h2>Social Collaboration on a Global Scale</h2>
+                <a href="#pageOne" data-direction="reverse" data-icon="home">Back</a>
+            </header>
+            <section data-role="content">
+                <section class="ui-grid-a" id="apiGrid">
+
+                </section>
+            </section>
+        </section>
+
+        <!-- API Page Grid Rotten Tomatoes -->
+        <section id="viewApiGridB" data-role="page" data-title="ThinkTank Ideas">
+            <header data-role="header">
+                <h1>ThinkTank</h1>
+                <h2>Social Collaboration on a Global Scale</h2>
+                <a href="#pageOne" data-direction="reverse" data-icon="home">Back</a>
+            </header>
+            <section data-role="content">
+                <section class="ui-grid-a" id="apiGridB">
+
+                </section>
+            </section>
+        </section>
+
+
         <!--jQuery & jQuery Mobile framework hosted local copies provided by jQuery.com-->
         <script type="text/javascript" src="js/libs/jquery-2.0.3.min.js"></script>
         <script type="text/javascript" src="js/libs/jquery.mobile-1.3.2.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <!--overriding js files-->
         <script type="text/javascript" src="js/avfDemo.js"></script>
-        <!--script type="text/javascript">
-            app.initialize();
-        </script-->
     </body>
 </html>
