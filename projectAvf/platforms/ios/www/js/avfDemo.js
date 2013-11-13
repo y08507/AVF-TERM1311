@@ -137,13 +137,13 @@ $('#viewApiGridB').on('pageinit', function () {
             var rtApiOutput = '';
             for (var i = 0; i < rtactivity.movies.length; i++) {
                 console.log(rtactivity.movies);
-                var tags = rtactivity.movies[i].title;
+                var tags = rtactivity.movies[i].release_dates.dvd;
                 var image = rtactivity.movies[i].posters.detailed;
                 //Discussion on lynda.com on uses of modulus operator which resolves remainder of a division problem. usage in designing a dynamic grid
                 var uiBlockType = ((i % 2) === 1) ? 'b' : 'a';
                 rtApiOutput += '<section class="ui-block-' + uiBlockType + '">';
                 rtApiOutput += '<img src="' + image + '"alt="' + tags + '"/>';
-                rtApiOutput += '<h3 class="tags">' + tags + '</h3>';
+                rtApiOutput += '<h3 class="tags">'+ "DVD Release Date " + tags + '</h3>';
                 rtApiOutput += "</section>";
             } // end of activityApi function
             $('#apiGridB').html(rtApiOutput); // inputs data to index.html
