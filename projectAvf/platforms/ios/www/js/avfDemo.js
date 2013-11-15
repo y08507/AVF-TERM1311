@@ -6,8 +6,15 @@
  * Full Sail University
  * Course: AVF
  * Term: 1311
- * Activity Demo App Week 2
+ * Activity Demo App Week 3
  */
+
+var pictureSource;   // picture source
+var destinationType; // sets the format of returned value
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+
 
 //global ajax setting
 $.ajaxSetup({
@@ -65,8 +72,53 @@ $('#pageOne').on('pageinit', function () {
     });
     $('#week2').on('click', function () {
         console.log("week 2 Dynamic page created");
-        alert("Temporarily Disabled");
-    });
+            var researchTopicsB = $("<section data-role='page' data-url=Week-1><header data-role='header' data-theme='d'>" +
+                "<h1>Week 2 Discuss Accessibility</h1><a href='#pageOne' data-icon='back' data-iconpos='' data-direction='reverse' class='ui-btn-left'>back</a></header>" +
+                "<section data-role='content' id='dynamicWeek2'>" +
+                "<section  data-role='collapsible' data-theme='d' id='listJsonB'>" +
+                "<h4><br>1. What are some of the ways that you could change your HTML on your Demo app to be more accessible? " +
+                "(Remember, you can use the Section tag with jQuery, for instance)</h4>" +
+                "<p>The article pointed out several key points to be aware of when structuring your html, not only for semantic value but, as the article explained, for accessibility needs." +
+                "One key value that can make the Demo app more accessible is by providing descriptive ALT attributes, which will enhance the users experience and also benefit the sematic layout of the page.</p>" +
+                "</section>" +
+                "<section  data-role='collapsible' data-theme='d' id='listJsonB'>" +
+                "<h4>2. Visit a video service on the web (like YouTube) and search for " + " Screen Reader Demo" + " and " + " Mobile Screen Reader " + " - what are some of the common frustrations" +
+                "(or common support mechanisms) that you see among the examples that are given - how could you fix them (or use them)?</h4>" +
+                "<p>The common comment I was exposed to in my research of screen readers was that the software was expensive. " +
+                "<p>Upon further research I located an incredible not-for-profit-organization called NV Access, which has developed a free open source software for accessibility called NVDA.</p>" +
+                "What also captivated my attention immediately was that this screen reader was developed for users by users implying that the design is effective.</p>" +
+                "<p>I was also thrilled that NVDA is open source software, which we as mobile developers can potentially contribute ideas for further implementation of this software into mobile platforms. " +
+                "At this point, the software is developed on the windows platform for desktop use. From the testimonials given by actual users of the software, the response is great. " +
+                "We can assist in the mobile development of this software by actively participating in the community site with ideas or testing the software in test apps. " +
+                "Just as media queries were developed to enhance the user’s experience by adapting to a diverse array of mobile devices, " +
+                "potentially there should be devised a type of query to be used in the css style sheet for accessibility specifically for graphic rich sites.</p>" +
+                "</section>" +
+                "<section  data-role='collapsible' data-theme='d' id='listJsonB'>" +
+                "<h4>3. Devices: Please list two devices (and some of their features) that are made specifically to support Accessibility.</h4>" +
+                "<p>Devices that support Accessibility:" +
+                "<br>iPhone" +
+                "<br>Android</p>" +
+                "<p>The iPhone has a vast amount of accessibility features one for example there is “Siri” voice command software, " +
+                "which goes beyond just the normal voice command software and becomes your mobile assistant. " +
+                "Allowing you to take control of your device with the power of your voice.  " +
+                "The iPhone also allows for Bluetooth connectivity to a keyboard or refreshable braille displays, and this is only a few of the accessibility features iPhone offers.</p>" +
+                "<p>The Android’s open architecture design would suggest a limitless amount of accessibility adaptions that can be developed and deployed by its vast community of developers. " +
+                "Android Jellybean 4.2 accessibility features are speech recognition, which does not require an Internet connection; " +
+                "Gesture support, which takes advantage of the touch screen abilities of the device and based on the object you are touching, " +
+                "allows the user to hear the name of that specific object.</p>" +
+                "</section>" +
+                "<section  data-role='collapsible' data-theme='d' id='listJsonB'>" +
+                "<h4>4. Mobile Apps: Please list two apps (either Android or iOS, or both) that are made specifically to support Accessibility.</h4>" +
+                "<p>Android Apps: " +
+                "<br>" +
+                "<br>Code Factory’s " + " Mobile Accessibility " +
+                "<br>https://play.google.com/store/apps/details?id=es.codefactory.android.app.ma.vocalizerenusprintcarrier</p> " +
+                "<p><br>Subway Accessibility NYC " +
+                "<br>https://play.google.com/store/apps/details?id=com.eddflrs.accessible_nyc</p>" +
+                "</section>");
+            researchTopicsB.appendTo($.mobile.pageContainer);
+            $.mobile.changePage(researchTopicsB);
+        });
     $('#week3').on('click', function () {
         console.log("week 3 Dynamic page created");
         alert("Temporarily Disabled");
@@ -76,8 +128,6 @@ $('#pageOne').on('pageinit', function () {
 //Instagram Data API loaded via AJAX
 $('#viewApiGrid').on('pageinit', function () {
     console.log("Target acquired by jQuery");
-    alert("Instagram API Data via ajax Loading");
-
     $("#ideaApi").empty();
     var instaApi = "https://api.instagram.com/v1/tags/raspberrypi/media/recent?callback=?&amp;client_id=c2ab9b6d7c5e4ad599076ec639db7bea&amp;min_id=10";
     $.ajax({
@@ -124,7 +174,6 @@ $('#viewApiGrid').on('pageinit', function () {
 
 $('#viewApiGridB').on('pageinit', function () {
     console.log("Target acquired by jQuery");
-    alert("Rotten Tomatoes API Data via ajax Loading");
     var urlApi = "http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/upcoming.json?apikey=c8cmt7jbts25ugfs6ptwdzkh";
 
     $.ajax({
@@ -136,18 +185,90 @@ $('#viewApiGridB').on('pageinit', function () {
             //Dynamically created grid for displaying images
             var rtApiOutput = '';
             for (var i = 0; i < rtactivity.movies.length; i++) {
-                console.log(rtactivity.movies);
-                var tags = rtactivity.movies[i].release_dates.dvd;
+                var tags = rtactivity.movies[i].title;
                 var image = rtactivity.movies[i].posters.detailed;
                 //Discussion on lynda.com on uses of modulus operator which resolves remainder of a division problem. usage in designing a dynamic grid
                 var uiBlockType = ((i % 2) === 1) ? 'b' : 'a';
                 rtApiOutput += '<section class="ui-block-' + uiBlockType + '">';
                 rtApiOutput += '<img src="' + image + '"alt="' + tags + '"/>';
-                rtApiOutput += '<h3 class="tags">'+ "DVD Release Date " + tags + '</h3>';
+                rtApiOutput += '<h3 class="tags">' + tags + '</h3>';
                 rtApiOutput += "</section>";
             } // end of activityApi function
+            console.log(rtactivity.movies);
             $('#apiGridB').html(rtApiOutput); // inputs data to index.html
         } //end of success function
     }); //end of ajax
     console.log("AJAX");
 }); //end of viewApiGridB
+
+function onDeviceReady() {
+//Phone Gap Doc: iOS Quirks set quality below 50 to avoid memory errors on some devices
+//Camera options
+var settings = {
+    quality: 50,
+    destinationType: Camera.DestinationType.DATA_URL,
+    sourceType: Camera.PictureSourceType.CAMERA
+};
+
+    $('#getPic').on('click', function(){
+    navigator.camera.getPicture(onSuccess, onFail, settings);
+    function onSuccess(imageData) {
+        console.log(imageData);
+        var camImage = document.getElementById('myImage');
+        camImage.src = "data:image/jpeg;base64," + imageData;
+    }
+    function onFail(message) {
+        alert('Device Failure due to: ' + message);
+    }
+});
+    $('#getDirection').on('click', function(){
+        navigator.compass.getCurrentHeading(onSuccess, onFail);
+        function onSuccess(compassData) {
+            var deviceCompass = document.getElementById('nativeCompass');
+            deviceCompass.innerHTML = 'Compass Magnetic Heading: ' + compassData.magneticHeading;
+        }
+        function onFail(message) {
+            alert('Device Failure due to: ' + message);
+        }
+    });
+    $('#getDevice').on('click', function(){
+        var deviceSpecs = document.getElementById('nativeDevice');
+        deviceSpecs.innerHTML = 'Device Model: '    + device.model    + '<br />' +
+            'Device Cordova: '  + device.cordova  + '<br />' +
+            'Device Platform: ' + device.platform + '<br />' +
+            'Device UUID: '     + device.uuid     + '<br />' +
+            'Device Version: '  + device.version  + '<br />';
+});
+    var setInterval = { frequency: 5000 };
+    $('#getMotion').on('click', function(){
+        navigator.accelerometer.watchAcceleration(onSuccess, onError, setInterval);
+        function onSuccess(motion) {
+            var deviceMotion = document.getElementById('nativeMotion');
+            deviceMotion.innerHTML = 'Acceleration X: ' + motion.x         + '<br />' +
+                'Acceleration Y: ' + motion.y         + '<br />' +
+                'Acceleration Z: ' + motion.z         + '<br />' +
+                'Timestamp: '      + motion.timestamp + '<br />';
+        }
+        function onError(message) {
+            alert('Device Failure due to: ' + message);
+        }
+    });
+    var geoSettings = {
+        enableHighAccuracy: true
+    };
+    $('#getLocation').on('click', function(){
+        navigator.geolocation.getCurrentPosition(onSuccess, onFail, geoSettings);
+        function onSuccess(geoData) {
+            //alert('Geolocation: ' + geoData.coords.latitude + geoData.coords.longitude);
+            var deviceGeolocation = document.getElementById('nativeGeo');
+            deviceGeolocation.innerHTML = 'Device Latitude: '    + geoData.coords.latitude    + '<br />' +
+                'Device Longitude: '  + geoData.coords.longitude  + '<br />' +
+                'Device Altitude: ' + geoData.coords.altitude  + '<br />' ;
+        }
+        function onFail(message) {
+            alert('Device Failure due to: ' + message.message + message.code);
+        }
+    });
+}
+
+

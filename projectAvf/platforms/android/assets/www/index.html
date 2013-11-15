@@ -22,7 +22,7 @@ Author: Luis Camacho Jr.
 Full Sail University
 Course: AVF
 Term: 1311
-Activity Demo App Week 2-->
+Activity Demo App Week 3-->
 <!DOCTYPE html>
 <html>
     <head>
@@ -43,21 +43,22 @@ Activity Demo App Week 2-->
                 <img src="img/ThinkTankResize.png" alt="View Source Logo"/>
             </header>
             <section data-role="content" class="pageOne">
-            <section>
+            <section class="pageOneA">
                 <h1>Native Components Chosen:</h1>
                 <h2>Android & iOS compatible</h2>
                 <ul>
-                    <li>Camera</li>
-                    <li>Notifications</li>
-                    <li>Media</li>
-                    <li>Accelerometer</li>
-                    <li>Geolocation</li>
+                    <li><a href="#viewCamera" data-role="button" data-transition="fade" id="getPic">Camera</a></li>
+                    <li><a href="#viewCompass" data-role="button" data-transition="fade" id="getDirection">Compass</a></li>
+                    <li><a href="#viewDevice" data-role="button" data-transition="fade" id="getDevice">Device details</a></li>
+                    <li><a href="#viewMotion" data-role="button" data-transition="fade" id="getMotion">Accelerometer</a></li>
+                    <li><a href="#viewGeo" data-role="button" data-transition="fade" id="getLocation">Geolocation</a></li>
                 </ul>
             </section>
             <section>
                 <h1>Data API Resources Chosen:</h1>
                 <ul>
-                    <li><a href="#viewApiGrid" data-transition="fade"><img src="img/Instagram_Icon_Large.png" alt="View Source Logo"/>Instagram API</a></li>
+                    <li><img src="img/Instagram_Icon_Large.png" alt="View Source Logo"/></li>
+                    <li><a href="#viewApiGrid" data-transition="fade">Instagram API</a></li>
                     <li><a href="#viewApiGridB" data-transition="fade">Rotten Tomatoes API</a></li>
                 </ul>
             </section>
@@ -117,6 +118,93 @@ Activity Demo App Week 2-->
             </section>
         </section>
 
+        <!-- Native Components Camera -->
+        <!-- Idea Add gallery for Photo's -->
+        <section id="viewCamera" data-role="page" data-title="ThinkTank Ideas">
+            <header data-role="header">
+                <h1>ThinkTank</h1>
+                <h2>Social Collaboration on a Global Scale</h2>
+                <a href="#pageOne" data-direction="reverse" data-icon="home">Back</a>
+            </header>
+            <section data-role="content">
+                <section class="ui-grid-a" id="nativeCamera">
+                    <img id="myImage" src="" />
+                </section>
+            </section>
+        </section>
+
+        <!-- Native Components Compass -->
+        <!-- Idea Add compass location image to page -->
+        <section id="viewCompass" data-role="page" data-title="ThinkTank Ideas">
+            <header data-role="header">
+                <h1>ThinkTank</h1>
+                <h2>Social Collaboration on a Global Scale</h2>
+                <a href="#pageOne" data-direction="reverse" data-icon="home">Back</a>
+            </header>
+            <section data-role="content">
+                <section id="nativeCompassA">
+                    <ul>
+                        <li id="nativeCompass">
+
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+
+        <!-- Native Components Device -->
+        <section id="viewDevice" data-role="page" data-title="ThinkTank Ideas">
+            <header data-role="header">
+                <h1>ThinkTank</h1>
+                <h2>Social Collaboration on a Global Scale</h2>
+                <a href="#pageOne" data-direction="reverse" data-icon="home">Back</a>
+            </header>
+            <section data-role="content">
+                <section id="nativeDeviceA">
+                    <ul>
+                        <li id="nativeDevice">
+
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+
+        <!-- Native Components Geolocation -->
+        <section id="viewGeo" data-role="page" data-title="ThinkTank Ideas">
+            <header data-role="header">
+                <h1>ThinkTank</h1>
+                <h2>Social Collaboration on a Global Scale</h2>
+                <a href="#pageOne" data-direction="reverse" data-icon="home">Back</a>
+            </header>
+            <section data-role="content">
+                <section id="nativeGeoA">
+                    <ul>
+                        <li id="nativeGeo">
+
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+
+        <!-- Native Components Accelerometer -->
+        <section id="viewMotion" data-role="page" data-title="ThinkTank Ideas">
+            <header data-role="header">
+                <h1>ThinkTank</h1>
+                <h2>Social Collaboration on a Global Scale</h2>
+                <a href="#pageOne" data-direction="reverse" data-icon="home">Back</a>
+            </header>
+            <section data-role="content">
+                <section id="nativeMotionA">
+                    <ul>
+                        <li id="nativeMotion">
+
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </section>
 
         <!--jQuery & jQuery Mobile framework hosted local copies provided by jQuery.com-->
         <script type="text/javascript" src="js/libs/jquery-2.0.3.min.js"></script>

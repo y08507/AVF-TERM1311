@@ -14,8 +14,16 @@
     max-width: 300px;
     
 }
+#pageOne header img {
+    width: 20%;
+    max-width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+
+}
 #pageOne img {
-    width: 40%;
+    width: 35%;
     max-width: 200px;
     display: block;
     margin-left: auto;
@@ -68,7 +76,7 @@ ul li {
 }
 #editItemSeparator {
 
-    background-color: #F3C824;
+    background-color: #FCF469;
     height: 5px;
     width: 70%;
 
@@ -100,7 +108,7 @@ section.pageOne.ui-content{
 }
 section.pageOne.ui-content section    {
     display: inline-block;
-    margin-right: 50px;
+    margin-right: 0px;
     margin-left: 50px;
     position: relative;
     font-family: "chalkduster", cursive;
@@ -121,6 +129,8 @@ section.pageOne.ui-content section    {
     margin-left: auto;
     margin-right: auto;
     width: 60%;
+    padding: 3px;
+    border: 1px solid #E7E7E7;
 }
 section#apiGrid.ui-grid-a h3 {
     margin: 15px 0 5px 0;
@@ -128,16 +138,28 @@ section#apiGrid.ui-grid-a h3 {
     font-size: 18px;
     text-align: center;
 }
+/*section#apiGridB.ui-grid-a {
+    width: 100%;
+    overflow: auto;
+}*/
+/*section.ui-block-a {
+    width: 130px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    margin-bottom: 15px;
+}*/
 section#apiGridB.ui-grid-a h3 {
     margin: 15px 0 5px 0;
     height: 45px;
     font-size: 18px;
+    text-align: center;
 }
 section.ui-content section h1{
     margin-top: 15px;
     margin-bottom: 5px;
     border-bottom: 2px
-    solid #F3C824;
+    solid #FCF469;
     font-family: "chalkduster", cursive;
 }
 section.ui-content section h2{
@@ -159,5 +181,64 @@ section#dynamicWeek1 {
     margin: 15px 0 5px 0;
     width: 90%;
 }
+#myImage img {
+    max-width: 100%;
+    display: block;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
 
+section.pageOneA ul li a{
+    background-image: linear-gradient(bottom, #FCF469 45%);
+    background-image: -o-linear-gradient(bottom, #FCF469 45%);
+    background-image: -moz-linear-gradient(bottom, #FCF469 45%);
+    background-image: -webkit-linear-gradient(bottom, #FCF469 45%);
+    background-image: -ms-linear-gradient(bottom, #FCF469 45%);
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.45, #FCF469)
+    );
+    display: inline-block;
+    outline: none;
+    cursor: progress;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0,0,0,.5);
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.5);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.5);
+    box-shadow: 0 1px 2px rgba(0,0,0,.5);
+    color: #878787;
+    font-family: "chalkduster", cursive;
+    font-size: 1em;
 
+}
+
+@media screen
+and (min-width : 768px)
+and (max-width : 1024px)
+{
+    section.pageOne.ui-content section    {
+        display: inline-block;
+        margin-right: 1px;
+        margin-left: 1px;
+        position: relative;
+        font-family: "chalkduster", cursive;
+        font-size: 12px;
+        vertical-align: top;
+
+    }
+    #pageOne header img {
+        width: 15%;
+        max-width: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto
+    }
+}
