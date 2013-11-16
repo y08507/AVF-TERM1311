@@ -259,12 +259,12 @@ var settings = {
             var deviceGeolocation = document.getElementById('nativeGeo');
             deviceGeolocation.innerHTML = 'Device Latitude: '    + geoData.coords.latitude    + '<br />' +
                 'Device Longitude: '  + geoData.coords.longitude  + '<br />' +
-                'Device Altitude: ' + geoData.coords.altitude  + '<br />' ;
+                'Device Altitude: ' + geoData.coords.altitude  + '<br />';
+            var geoImage = document.getElementById('geoImage');
+            geoImage.src = "http://maps.googleapis.com/maps/api/staticmap?center="+geoData.coords.latitude+","+geoData.coords.longitude+"&zoom=12&size=400x400&markers=color:blue|"+geoData.coords.latitude+","+geoData.coords.longitude+"&sensor=false";
         }
         function onFail(message) {
             alert('Device Failure due to: ' + message.message + message.code);
         }
     });
 }
-
-
