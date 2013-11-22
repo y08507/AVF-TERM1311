@@ -22,7 +22,7 @@ Author: Luis Camacho Jr.
 Full Sail University
 Course: AVF
 Term: 1311
-Activity Demo App Week 3-->
+Activity Demo App Week 4-->
 <!DOCTYPE html>
 <html>
     <head>
@@ -51,7 +51,8 @@ Activity Demo App Week 3-->
                     <li><a href="#viewCompass" data-role="button" data-transition="fade" id="getDirection">Compass</a></li>
                     <li><a href="#viewDevice" data-role="button" data-transition="fade" id="getDevice">Device details</a></li>
                     <li><a href="#viewMotion" data-role="button" data-transition="fade" id="getMotion">Accelerometer</a></li>
-                    <li><a href="#viewGeo" data-role="button" data-transition="fade" id="getLocation">Geolocation</a></li>
+                    <li><a href="#viewGeo" data-role="button" data-transition="fade" id="getLocation">Geolocation + Google Maps API</a></li>
+                    <li><a href="#viewWeatherPic" data-role="button" data-transition="fade" id="weatherPic">Camera + Geo + Weather API </a></li>
                 </ul>
             </section>
             <section>
@@ -180,11 +181,11 @@ Activity Demo App Week 3-->
             <section data-role="content">
                 <section id="nativeGeoA">
                     <ul>
+                        <li>
+                            <img id="geoImage" src="" width="400" height="400" alt="user location"/>
+                        </li>
                         <li id="nativeGeo">
 
-                        </li>
-                        <li>
-                            <img id="geoImage" src="" width="400" height="400" alt="Map of Newburgh,NY"/>
                         </li>
                     </ul>
                 </section>
@@ -204,6 +205,27 @@ Activity Demo App Week 3-->
                         <li id="nativeMotion">
 
                         </li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+
+        <section id="viewWeatherPic" data-role="page" data-title="ThinkTank Ideas">
+            <header data-role="header">
+                <h1>ThinkTank</h1>
+                <h2>Social Collaboration on a Global Scale</h2>
+                <a href="#pageOne" data-direction="reverse" data-icon="home">Back</a>
+            </header>
+            <section data-role="content">
+                <section id="nativeMashup">
+                    <ul>
+                        <li>
+                            <img id="weatherImageA" src="" width="400" height="400" alt="Weather location"/>
+                        </li>
+                        <li id="weatherMashUp">
+
+                        </li>
+
                     </ul>
                 </section>
             </section>

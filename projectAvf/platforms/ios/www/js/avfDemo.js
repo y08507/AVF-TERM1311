@@ -6,7 +6,7 @@
  * Full Sail University
  * Course: AVF
  * Term: 1311
- * Activity Demo App Week 3
+ * Activity Demo App Week 4
  */
 
 
@@ -80,7 +80,7 @@ $('#pageOne').on('pageinit', function () {
                 "<section  data-role='collapsible' data-theme='d' id='listJsonB'>" +
                 "<h4>2. Visit a video service on the web (like YouTube) and search for " + " Screen Reader Demo" + " and " + " Mobile Screen Reader " + " - what are some of the common frustrations" +
                 "(or common support mechanisms) that you see among the examples that are given - how could you fix them (or use them)?</h4>" +
-                "<p>The common comment I was exposed to in my research of screen readers was that the software was expensive. " +
+                "<p>The common comment I was exposed to in my research of screen readers was that the software was expensive.</p> " +
                 "<p>Upon further research I located an incredible not-for-profit-organization called NV Access, which has developed a free open source software for accessibility called NVDA.</p>" +
                 "What also captivated my attention immediately was that this screen reader was developed for users by users implying that the design is effective.</p>" +
                 "<p>I was also thrilled that NVDA is open source software, which we as mobile developers can potentially contribute ideas for further implementation of this software into mobile platforms. " +
@@ -117,7 +117,46 @@ $('#pageOne').on('pageinit', function () {
         });
     $('#week3').on('click', function () {
         console.log("week 3 Dynamic page created");
-        alert("Temporarily Disabled");
+        var researchTopicsC = $("<section data-role='page' data-url=Week-3><header data-role='header' data-theme='d'>" +
+            "<h1>Week 3 Discuss Industry Research</h1><a href='#pageOne' data-icon='back' data-iconpos='' data-direction='reverse' class='ui-btn-left'>back</a></header>" +
+            "<section data-role='content' id='dynamicWeek3'>" +
+            "<section  data-role='collapsible' data-theme='d' id='listJsonC'>" +
+            "<h4><br>1. What are the 'top selling' app categories in the U.S.? Japan? Great Britain?</h4> " +
+            "<p>Overwhelmingly the category listed as the top selling was games in all 3 countries (DISTIMO, 2013).</p>" +
+            "<p>U.S. top selling categories were games and photo & video.</p>" +
+            "Japan’s top selling category was undoubtedly games." +
+            "Great Britain’s top selling categories were games, health care & fitness, and photo & video.</p>" +
+            "</section>" +
+            "<section  data-role='collapsible' data-theme='d' id='listJsonC'>" +
+            "<h4>2. Based on your three answers above, what might you infer about each of the markets listed?</h4>" +
+            "<p>The one commonality that is obvious is the world’s obsession with being entertained.</p>" +
+            "<p>These staggering statistics clearly represent the main usage of the smartphone.</p>" +
+            "</section>" +
+            "<section  data-role='collapsible' data-theme='d' id='listJsonC'>" +
+            "<h4>3. What is the average cost and bandwidth limits per user (in general) in each of the three markets? How may this impact development? </h4>" +
+            "<p>Average cost for all three markets ranged around $40 for 1GB with a bandwidth limit per user cap that varied per country (Pingdom, 2013).</p>" +
+            "<p>Unlimited data plans are becoming only a memory of the past while data caps are, more than likely, present and rapidly becoming our future.</p> " +
+            "<p>The internet has not only become our source for information, but also entertainment and a vast majority of cable television subscribers have</p>" +
+            "<p>transitioned to some sort of streaming service which has caused an increase in bandwidth usage. Thus, the inevitable bandwidth cap has been" +
+            " strategically implemented to counter the demand in order to capitalize on profits (Clark, 2013).</p>" +
+            "</section>" +
+            "<section  data-role='collapsible' data-theme='d' id='listJsonC'>" +
+            "<h4>4. And, finally, what would be your suggested strategy in project topic and global market choice? Feel free to have a first and second choice.</h4>" +
+            "<p>In order to fully capitalize on the market I would suggest a project based on a game design which intertwines the three markets best game design components into one game.</p>" +
+            "</section>" +
+            "<section  data-role='collapsible' data-theme='d' id='listJsonC'>" +
+            "<h4>Works Cited</h4>" +
+            "<p>App Annie. (2013, September 30). App annie index for japan: Apps – line leads the app pack - see more at. " +
+            "Retrieved from http://blog.appannie.com/app-annie-index-japan-apps-july-2013/</p>" +
+            "<p>Clark, M. (2013, Feburary 14). Isp data caps in the era of downloadable games. " +
+            "Retrieved from http://www.ign.com/articles/2013/02/14/isp-data-caps-in-the-era-of-downloadable-games</p>" +
+            "<p>DISTIMO. (2013). Apple app store, united states, top overall, free, 2013-11-18. " +
+            "Retrieved from http://www.distimo.com/leaderboards/apple-app-store-for-iphone/united-states/top-overall/paid</p>" +
+            "<p>Pingdom. (2013, March 12). Broadband prices vary extremely across the world. " +
+            "Retrieved from http://royal.pingdom.com/2013/03/12/broadband-prices/</p>" +
+            "</section>");
+        researchTopicsC.appendTo($.mobile.pageContainer);
+        $.mobile.changePage(researchTopicsC);
     });
 });
 
@@ -143,23 +182,6 @@ $('#viewApiGrid').on('pageinit', function () {
                 instaApiOutput += '<img src="' + image + '"alt="' + tags + '"/>';
                 instaApiOutput += '<h3 class="tags">' + tags[0] + '</h3>';
                 instaApiOutput += "</section>";
-                // Function for listview output with mobile page container for details
-                /* $("#ideaApi").empty();
-                 $.each(activityApi.data, function(index, details){
-                 var details = $(this);
-                 var makeSubList = $("<li></li>");
-                 var makeSubLi = $("<li><a href='#'><img src='" + details.images.thumbnail.url + "'alt='"+"'/><h2>"+ details.tags[0] +"</h2></a></li>");
-                 var makeLink = $("<a href='#'></a>");
-                 console.log(makeSubLi);
-                 makeLink.on('click', function () {
-
-                 console.log("Dynamically creating page container for images");
-                 var newImageData = $("<section data-role='page' data-url=Instagram-API><header data-role='header' data-theme='d'><h1>" + details.user.id + "</h1><a href='#viewApi' data-icon='back' data-iconpos='' data-direction='reverse' class='ui-btn-left'>back</a></header><section data-role='content'><ul  data-role='listview' data-theme='d' id='listJson'><li><br>" + details.user.id + "</li><li><br>" + details.user.id + "</li><li><br>" + details.user.id + "</li><li><br> " + details.user.id + "</li></ul></section><footer data-role='footer' data-theme='b' data-position='fixed' style='overflow:hidden;'><nav data-role='navbar' data-position='fixed' data-iconpos='bottom'><ul><li><a href='#' class='' data-icon='plus'>Add New</a></li><li><a href='#' class='editData' data-icon='edit'>Edit</a></li><li><a href='#' class='deleteData' data-icon='delete'>Delete</a></ul></nav></footer></section>");
-                 newImageData.appendTo($.mobile.pageContainer);
-                 $.mobile.changePage(newImageData);
-                 });
-                 makeLink.html(makeSubLi);
-                 makeSubList.append(makeLink).appendTo("#ideaApi");*/
             } // end of activityApi function
             $('#apiGrid').html(instaApiOutput); // inputs
             //$('#ideaApi').listview('refresh');
@@ -267,4 +289,42 @@ var settings = {
             alert('Device Failure due to: ' + message.message + message.code);
         }
     });
+    $('#weatherPic').on('click', function(){
+        navigator.camera.getPicture(onSuccess, onFail, settings);
+        function onSuccess(weatherImage) {
+            console.log(weatherImage);
+            var camImageA = document.getElementById('weatherImageA');
+            camImageA.src = "data:image/jpeg;base64," + weatherImage;
+            navigator.geolocation.getCurrentPosition(onSuccessA, onFailA, geoSettings);
+        }
+        function onFail(message) {
+            alert('Device Failure due to: ' + message);
+        }
+
+        function onSuccessA(geoData) {
+                //AJAX for Weather API http://openweathermap.org/
+                var weatherApi = "http://api.openweathermap.org/data/2.5/weather?lat="+geoData.coords.latitude+"&lon="+geoData.coords.longitude+"&units=imperial&APPID=74950f3ad64f6c6e69cc664d22bf9acf";
+                $.ajax({
+                    url: weatherApi,
+                    type: "GET",
+                    dataType: "jsonp",
+                    success: function (weatherData, status) {
+                        console.log(status, weatherData);
+                        var weatherMashup = document.getElementById('weatherMashUp');
+                        weatherMashup.innerHTML = 'Weather: '    + weatherData.weather[0].main   + '<br />' +
+                            'Weather Description: '  + weatherData.weather[0].description  + '<br />' +
+                            'Temperature: ' + weatherData.main.temp  + '<br />' +
+                            'Humidity: ' +weatherData.main.humidity + '<br />' +
+                            'Location: ' + weatherData.name + '<br />'
+                        } //end of success function
+                    }); //end of ajax
+                    console.log("AJAX");
+        }
+        function onFailA(message) {
+            alert('Device Failure due to: ' + message.message + message.code);
+        }
+    });
 }
+
+
+

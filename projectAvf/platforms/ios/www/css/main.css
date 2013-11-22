@@ -3,7 +3,7 @@
  * Full Sail University
  * Course: AVF
  * Term: 1311
- * Activity Demo App Week 3
+ * Activity Demo App Week 4
  */
 
 .ui-header h1.ui-title {
@@ -113,6 +113,7 @@ section.pageOne.ui-content section    {
     position: relative;
     font-family: "chalkduster", cursive;
     vertical-align: top;
+    float: left;
 }
 #apiGrid img {
     max-width: 100%;
@@ -220,11 +221,12 @@ section.pageOneA ul li a{
 
 }
 
+
 @media screen
 and (min-width : 768px)
 and (max-width : 1024px)
 {
-    section.pageOne.ui-content section    {
+    section.pageOne.ui-content{
         display: inline-block;
         margin-right: 1px;
         margin-left: 1px;
@@ -232,13 +234,13 @@ and (max-width : 1024px)
         font-family: "chalkduster", cursive;
         font-size: 12px;
         vertical-align: top;
-
     }
     #pageOne header img {
-        width: 14.74609375%;
+        width: 9.74609375%;
         max-width: 200px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto
+        display: inline-block;
+        top: 0;
+        left: 0;
+        position: absolute;
     }
 }
