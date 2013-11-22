@@ -218,9 +218,43 @@ section.pageOneA ul li a{
     color: #878787;
     font-family: "chalkduster", cursive;
     font-size: 1em;
-
+}
+section.pageOneB ul li a:hover, section.pageOneB ul li a:focus{
+    text-decoration: underline;
+    color: #0000EE;
+}
+section.pageOneB ul li a{
+    text-decoration: none;
+    color: #878787;
 }
 
+section.pageOneC ul li a:hover, section.pageOneC ul li a:focus{
+    text-decoration: underline;
+    color: #0000EE;
+}
+section.pageOneC ul li a{
+    text-decoration: none;
+    color: #878787;
+}
+#geoImage {
+    border-style: double;
+}
+#nativeGeo {
+    color: #0000EE;
+    font-weight: bold;
+    font-size: 18px;
+}
+#weatherImageA {
+    border-style: double;
+}
+#weatherMashUp {
+    color: #0000EE;
+    font-weight: bold;
+    font-size: 18px;
+}
+span.ui-btn-text {
+    font-family: "chalkduster", cursive;
+}
 
 @media screen
 and (min-width : 768px)
@@ -232,7 +266,7 @@ and (max-width : 1024px)
         margin-left: 1px;
         position: relative;
         font-family: "chalkduster", cursive;
-        font-size: 12px;
+        font-size: 14px;
         vertical-align: top;
     }
     #pageOne header img {
